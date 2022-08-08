@@ -1,5 +1,5 @@
 # Start from Waggle base image
-FROM kwelbeck/base-ros2-with-empty-overlay:arm64
+FROM waggle/plugin-base:1.1.1-ml
 
 # Install linux packages
 RUN apt update && apt install -y zip htop screen libgl1-mesa-glx
