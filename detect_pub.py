@@ -1,7 +1,6 @@
 # YOLOv5 🚀 by Ultralytics, GPL-3.0 license
 """
 Run inference on images, videos, directories, streams, etc.
-
 Usage - sources:
     $ python path/to/detect.py --weights yolov5s.pt --source 0              # webcam
                                                              img.jpg        # image
@@ -10,7 +9,6 @@ Usage - sources:
                                                              path/*.jpg     # glob
                                                              'https://youtu.be/Zgi9g1ksQHc'  # YouTube
                                                              'rtsp://example.com/media.mp4'  # RTSP, RTMP, HTTP stream
-
 Usage - formats:
     $ python path/to/detect.py --weights yolov5s.pt                 # PyTorch
                                          yolov5s.torchscript        # TorchScript
@@ -250,9 +248,8 @@ def parse_opt():
 def main(opt):
     check_requirements(exclude=('tensorboard', 'thop'))
     run(**vars(opt))
-
     
-# pubsub on ROS  
+# import requirements moduels for ros pub 
 import rospy
 from std_msgs.msg import String
   
