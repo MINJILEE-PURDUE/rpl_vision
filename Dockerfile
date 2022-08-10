@@ -1,6 +1,5 @@
 # Start from Waggle base image
 FROM waggle/plugin-base:1.1.1-ml
-# YOLOv5 🚀 by Ultralytics, GPL-3.0 license
 
 # Start FROM NVIDIA PyTorch image https://ngc.nvidia.com/catalog/containers/nvidia:pytorch
 FROM nvcr.io/nvidia/pytorch:22.04-py3
