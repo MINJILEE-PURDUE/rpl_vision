@@ -7,7 +7,7 @@ ADD https://ultralytics.com/assets/Arial.ttf https://ultralytics.com/assets/Aria
 
 # Install linux packages
 #RUN apt update && apt install --no-install-recommends -y zip htop screen libgl1-mesa-glx python3-tk
-RUN apt update && apt install python3-tk
+RUN apt-get update && apt-get -y install python3-tk
 
 # Install pip packages
 COPY requirements.txt .
