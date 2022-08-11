@@ -14,7 +14,7 @@ COPY requirements.txt .
 RUN python3 -m pip install --upgrade pip
 #RUN pip3 uninstall -y torch torchvision 
 #RUN pip3 install --no-cache -r requirements.txt albumentations wandb gsutil notebook Pillow>=9.1.0
-RUN pip3 install torch==1.8.0 torchvision==0.9.1 tqdm==4.64.0
+RUN pip3 install torch==1.8.0 torchvision==0.9.1 tqdm==4.64.0 seaborn==0.11.0
 
 # Create working directory
 RUN mkdir -p /usr/src/app
