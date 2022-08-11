@@ -249,34 +249,34 @@ def main(opt):
     check_requirements(exclude=('tensorboard', 'thop'))
     run(**vars(opt))
     
-# import requirements moduels for ros pub 
-import rospy
-from std_msgs.msg import String
+# # import requirements moduels for ros pub 
+# import rospy
+# from std_msgs.msg import String
   
-def publisher():
-    # define the actions the publisher will make
-    pub = rospy.Publisher('/<topic_name>',
-                          String, queue_size=10)
-    # initialize the publishing node
-    rospy.init_node('<node_name>', anonymous=True)
+# def publisher():
+#     # define the actions the publisher will make
+#     pub = rospy.Publisher('/<topic_name>',
+#                           String, queue_size=10)
+#     # initialize the publishing node
+#     rospy.init_node('<node_name>', anonymous=True)
       
-    # define how many times per second
-    # will the data be published
-    # 10 times/second or 10Hz as an example
-    rate = rospy.Rate(10)
-    # to keep publishing as long as the core is running
-    while not rospy.is_shutdown():
-        data = "The data that you wish to publish."
+#     # define how many times per second
+#     # will the data be published
+#     # 10 times/second or 10Hz as an example
+#     rate = rospy.Rate(10)
+#     # to keep publishing as long as the core is running
+#     while not rospy.is_shutdown():
+#         data = "The data that you wish to publish."
           
-        # you could simultaneously display the data
-        # on the terminal and to the log file
-        rospy.loginfo(data)
+#         # you could simultaneously display the data
+#         # on the terminal and to the log file
+#         rospy.loginfo(data)
           
-        # publish the data to the topic using publish()
-        pub.publish(data)
+#         # publish the data to the topic using publish()
+#         pub.publish(data)
           
-        # keep a buffer based on the rate defined earlier
-        rate.sleep()
+#         # keep a buffer based on the rate defined earlier
+#         rate.sleep()
   
 
 if __name__ == "__main__":
