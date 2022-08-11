@@ -1,4 +1,4 @@
-# Start FROM NVIDIA PyTorch image https://ngc.nvidia.com/catalog/containers/nvidia:pytorch
+# Start waggle base image supporting ml
 FROM waggle/plugin-base:1.1.1-ml
 
 # Downloads to user config dir
